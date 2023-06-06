@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="contenedor-titulo">
+    <h1 class="title">Lista de Asistencia de Amarine Services</h1>
+  </div>
+  <div id="contenedor-fechaHora">
+    <div id="fecha-hora-actual"></div>
+  </div>
+
+  <div id="contenedor-tablas">
+    <div id="contenedor-tabla">
+      <table id="tabla-empleados">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Número de teléfono</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla">
+        </tbody>
+      </table>
+    </div>
+  
+    <div id="contenedor-registros">
+      <table id="tabla-registros">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>¿Asistió?</th>
+            <th>Fecha y hora registrada</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-registros">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="contenedor-detalles">
+    <div id="detalles-empleado">
+      <h2>Detalles del empleado</h2>
+      <p><strong>ID:</strong> <span id="detalle-id"></span></p>
+      <p><strong>Nombre:</strong> <span id="detalle-nombre"></span></p>
+      <p><strong>Apellidos:</strong> <span id="detalle-apellidos"></span></p>
+      <p><strong>Número de teléfono:</strong> <span id="detalle-telefono"></span></p>
+      <p><strong>Email:</strong> <span id="detalle-email"></span></p>
+  
+      <div id="botones-asistencia">
+        <button onclick="registrarAsistencia('Asistió')">Asistió</button>
+        <button onclick="registrarAsistencia('No asistió')">No asistió</button>
+        <button onclick="descargarTablaPDF2()">Descargar PDF</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="./jspdf.plugin.autotable.js"></script>
+  <script src="./main-script.js"></script>
+    
+</body>
+</html>

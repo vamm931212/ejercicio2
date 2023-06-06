@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+.contenedor-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin: 0;
+}
+.title{
+  text-align: center;
+}
+#contenedor-fechaHora{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#fecha-hora-actual{
+  grid-column: 3;
+  align-items: flex-end;
+  justify-self: end;
+  padding: 0 15px;
+}
+#contenedor-tablas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contenedor-tabla {
+  flex: 1;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+  overflow: auto;
+  max-height: 300px;
+}
+
+#tabla-empleados {
+  width: 100%;
+}
+
+#contenedor-registros {
+  flex: 1;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+  overflow: auto;
+  max-height: 300px;
+}
+
+#tabla-registros {
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #000000;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#contenedor-detalles{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#detalles-empleado {
+  /* float: right; */
+  /* width: 45%; */
+  margin-right: 10px;
+}
+
+#detalles-empleado p {
+  text-align: left;
+}
+
+/* #tabla-registros {
+  float: left;
+} */
+
+#botones-asistencia {
+  clear: both;
+  margin-top: 20px;
+}
+
+#botones-asistencia button {
+  margin-right: 10px;
+}
+
+.selected {
+  background-color: #F6FA70 !important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  
+  #contenedor-tablas {
+    flex-direction: column;
+  }
+
+  #contenedor-tabla,
+  #contenedor-registros {
+    width: 100%;
+  }
+
+  #tabla-registros {
+    margin-top: 20px;
+  }
+  th, td {
+    display: block;
+    width: 100%;
+  }
+  #fecha-hora-actual{
+    grid-column: 2/4;
+    align-items: flex-end;
+    justify-self: end;
+    padding: 0 15px;
+  }
+  #contenedor-detalles{
+    justify-content: center;
+    align-items: center;
+  }
+}
